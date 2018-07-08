@@ -101,7 +101,7 @@ COPY run_jupyter.sh /
 #    rm -rf /root/.cache
 # Clean up pip wheel and Bazel cache when done.
 
-COPY yb-sw-config.NIMBIX.x8664.turbotensor.sh /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh
+COPY yb-sw-config.NIMBIX.x8664.turbotensor.sh /tmp/
 RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 # TensorBoard
