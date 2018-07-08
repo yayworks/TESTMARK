@@ -4,7 +4,7 @@ FROM ubuntu:16.04
 MAINTAINER Craig Citro <craigcitro@google.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends && \
-        apt-get -y install software-properties-common python-software-properties && \
+        apt-get -y install software-properties-common python-software-properties \
         build-essential \
         curl \
         git \
