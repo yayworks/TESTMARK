@@ -3,14 +3,30 @@ FROM ubuntu:16.04
 
 MAINTAINER Craig Citro <craigcitro@google.com>
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends && \
+        apt-get -y install software-properties-common python-software-properties && \
         build-essential \
         curl \
         git \
+        
+        make \
+        wget \
         libcurl3-dev \
         libfreetype6-dev \
         libpng12-dev \
-        libzmq3-dev \
+        libzmq3-dev \    
+        libibverbs-dev \
+        libibverbs1 \
+        librdmacm1 \
+        librdmacm-dev \
+        rdmacm-utils \
+        libibmad-dev \
+        libibmad5 \
+        byacc \
+        libibumad-dev \
+        libibumad3 \
+        flex \
+        
         pkg-config \
         python-dev \
         rsync \
@@ -18,7 +34,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         unzip \
         zip \
         zlib1g-dev \
-        && \
+        && \    
+    apt-get install -y python3.4 && \
+    apt-get install -y python3-pip && \
+    apt-get install -y python-qt4 && \ 
+    apt-get install -y nodejs-legacy && \
+    apt-get install -y npm && \
+        
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
