@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends && \
         git \
         
         make \
+        sudo \
         wget \
         libcurl3-dev \
         libfreetype6-dev \
